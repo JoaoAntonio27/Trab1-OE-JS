@@ -55,3 +55,7 @@ function evaluateExpression(expression) {
 }
 
 //console.log(evaluateExpression("CALCULO"));
+//<exp> ::= <exp> "+" <term> | <term>
+//<term> ::= <term> "*" <term> | <factor>
+//<factor> ::= "(" <exp> ")" | <num>
+//<num> ::= [0-9]
