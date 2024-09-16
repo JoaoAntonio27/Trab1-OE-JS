@@ -59,3 +59,13 @@ function evaluateExpression(expression) {
 //<term> ::= <term> "*" <term> | <factor>
 //<factor> ::= "(" <exp> ")" | <num>
 //<num> ::= [0-9]
+
+
+//<select_stmt> ::= "select " <coluna>  (", " <coluna>)* " from " <tabela> (" where " <filter_exp>)? ";"
+//<coluna> ::= [a-z]+ [0-9]*
+//<tabela> ::= [a-z]+ [0-9]*
+//<filter_exp> ::= [a-z]+ <sims> [0-9]+ (<comp> <filter_exp>)?
+//<sims> ::= "<" | ">" | "<=" | ">=" | "<>"
+//<comp> ::= " AND " | " OR "
+
+//select nome, idade from aluno where idade<3 AND idade<3 AND idade<3 AND idade<3;
